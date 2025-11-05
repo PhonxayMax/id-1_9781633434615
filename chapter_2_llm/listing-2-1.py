@@ -21,3 +21,6 @@ response = client.chat.completions.create(
     ] 
 ) 
 print(response.choices[0].message.content) 
+print(f"Input tokens: {response.usage.prompt_tokens}")
+print(f"Output tokens: {response.usage.completion_tokens}")
+print(f"Reasoning tokens: {response.usage.completion_tokens_details.reasoning_tokens}")
